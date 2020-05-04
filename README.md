@@ -35,7 +35,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 > jenkins和docker环境均已安装在master节点上，ip：10.108.211.136
 
-##### 基本信息：
+#### 基本信息：
 
 * jenkins地址：10.108.211.136:12312/jenkins
 
@@ -43,19 +43,19 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 
 
-##### 2.1、创建项目
+#### 2.1、创建项目
 
 点击 “New 任务” 新建jenkins项目。
 
 <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gegtrhcv2aj30a80bfgmf.jpg" style="zoom: 67%;" />
 
-输出名称，选择构建类型（这里选择maven）。
+输入名称，选择构建类型（这里选择maven）。
 
 <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gegttsl4m8j31590n6gq1.jpg"  />
 
 
 
-##### 2.2、配置git仓库信息
+#### 2.2、配置git仓库信息
 
 填写仓库地址，根据需求添加令牌。
 
@@ -63,7 +63,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 
 
-##### 2.3、构建触发器
+#### 2.3、构建触发器
 
 选择远程构建触发器。
 
@@ -73,7 +73,7 @@ Token设置完成后，使用web访问 `10.108.211.136:12312/job/springbootdemo4
 
 
 
-##### 2.4、build前工作
+#### 2.4、build前工作
 
 选择shell命令，填写在maven执行build任务之前需要执行的工作。
 
@@ -103,7 +103,7 @@ fi
 
 
 
-##### 2.5、Maven build
+#### 2.5、Maven build
 
 填写build指令。
 
@@ -111,7 +111,7 @@ fi
 
 
 
-##### 2.6、build后工作
+#### 2.6、build后工作
 
 同样选择shell命令，添加Maven build任务执行成功后需要执行的任务。
 
@@ -133,7 +133,7 @@ docker run -d -p 8072:8072 --name demo_container springbootdemo4docker
 
 
 
-##### 2.7、启动构建
+#### 2.7、启动构建
 
 点击 “Save” 保存配置项后，选择 “立即构建” 即可触发本项目的构建任务。
 
