@@ -13,6 +13,6 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello() {
-        return "Hello World for docker";
+        return "Hello World for docker and jenkins";
     }
 }
